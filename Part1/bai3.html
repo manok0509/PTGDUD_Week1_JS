@@ -1,18 +1,56 @@
 <body>
     
     <script>
-       var dolphin_s1=0;
-       var dolphin_s2=0;
-       var dolphin_s3=0;
+       var dolphin_s1=97;
+       var dolphin_s2=112;
+       var dolphin_s3=101;
        
-       var koalas_s1 = 0;
-       var koalas_s2 = 0;
-       var koalas_s3 = 0;
+       var koalas_s1 = 109;
+       var koalas_s2 = 95;
+       var koalas_s3 = 106;
 
        var avg_dolphin = (dolphin_s1 + dolphin_s2 +dolphin_s3)/3
        var avg_koalas = (koalas_s1 + koalas_s2 +koalas_s3)/3
-
+    
+       console.log("task_1")
        console.log(avg_dolphin);
        console.log(avg_koalas);
+
+       console.log("task_2");
+
+       if(avg_dolphin > avg_koalas) {
+        console.log("dolphin win")
+       }
+       else if (avg_dolphin < avg_koalas){
+        console.log("koalas win")
+       }
+       else {
+         console.log("draw")
+       }
+
+       console.log("task_3");
+       if(avg_dolphin > avg_koalas && avg_dolphin > 100) {
+        console.log("dolphin win")
+       }
+       else if (avg_dolphin < avg_koalas && avg_koalas > 100){
+        console.log("koalas win")
+       }
+       else {
+         console.log("draw")
+       }
+
+       console.log("task_4");
+       if(avg_dolphin > avg_koalas && avg_dolphin >= 100) {
+        console.log("dolphin win")
+       }
+       else if (avg_dolphin < avg_koalas && avg_koalas >= 100){
+        console.log("koalas win")
+       }
+       else if (avg_dolphin == avg_koalas && avg_koalas >= 100){
+        console.log("draw")
+       }
+
+
+       
     </script>
 </body>
