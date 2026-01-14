@@ -1,0 +1,42 @@
+<body>
+    <h1>Dolphins score</h1>
+    <input type="text" value="44" id="dol_1">
+    <input type="text" value="23" id="dol_2">
+    <input type="text" value="71" id="dol_3">
+
+    <h1>Koalas score</h1>
+    <input type="text" value="85" id="kol_1">
+    <input type="text" value="54" id="kol_2">
+    <input type="text" value="41" id="kol_3">
+
+    <button id="cal">Calculate</button>
+
+    <script>
+        var dol_1 = parseInt(document.getElementById("dol_1").value);
+        var dol_2 = parseInt(document.getElementById("dol_2").value);
+        var dol_3 = parseInt(document.getElementById("dol_3").value);
+
+        var kol_1 = parseInt(document.getElementById("kol_1").value);
+        var kol_2 = parseInt(document.getElementById("kol_2").value);
+        var kol_3 = parseInt(document.getElementById("kol_3").value);
+
+        var calAverage = (s1,s2,s3) =>{
+            return (s1+s2+s3)/3
+        }
+
+        var dol_Average = calAverage(dol_1,dol_2,dol_3);
+        console.log("Dolphin average score:" +dol_Average);
+        var kol_Average = calAverage(kol_1,kol_2,kol_3);
+        console.log("Koloas average score:" +kol_Average);
+
+        var checkWinner = (dol_avg,kol_avg) =>{
+            if(dol_avg>kol_avg && dol_avg>=2*kol_avg) {
+                console.log(`Dolphin win (${dol_avg} vs. ${kol_avg})`)
+            }else if(kol_avg>dol_avg && kol_avg>=2*dol_avg) {
+                console.log(`Koalas win (${kol_avg} vs. ${dol_avg})`)
+            }
+        }
+        var rs = checkWinner(dol_Average,kol_Average)
+        // console.log(rs)
+    </script>
+</body>
