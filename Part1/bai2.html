@@ -1,0 +1,24 @@
+<body>
+    
+    <script>
+        var mark_mass = 78;
+        var mark_height = 1.69;
+        var john_mass= 95;
+        var john_height = 1.88;
+
+        var mark_bmi = mark_mass / mark_height**2;
+        var john_bmi = john_mass / john_height**2;
+
+        console.log(mark_bmi);
+        console.log(john_bmi);
+
+        var markHigherBMI = mark_bmi>john_bmi;
+
+        if(markHigherBMI) {
+            console.log(`Marks BMI (${mark_bmi}) is higher than John's ! (${john_bmi})`)
+        }
+        else {
+            console.log(`John's BMI (${mark_bmi}) is higher than Mark's! (${john_bmi})`)
+        }
+    </script>
+</body>
